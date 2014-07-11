@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
 	for (var i = 0; i < 16; i++) {
 		$('table').append("<tr></tr>");
 	}
@@ -7,11 +8,19 @@ $(document).ready(function () {
 	}
 	$('td').append('<div></div>');
 
-	$("div").hover(function () {
-		$(this).fadeOut(100);
-	},
 
-	function () {
-		$(this).fadeIn(500);
+	$('div').hover(function() {
+		$(this).animate({
+			"backgroundColor":"yellow"
+		},500);
+	}
+
+	,function() {
+		$(this).animate({"backgroundColor":"blue"}, 1000)
+
 	});
+
+
+
 });
+
